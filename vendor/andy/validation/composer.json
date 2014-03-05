@@ -1,0 +1,25 @@
+{
+    "name": "andy/validation",
+    "description": "Custom libary of Crhayes",
+    "authors": [
+        {
+            "name": "PhucPM",
+            "email": "PhucPM.IT@Gmail.Com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
+        "illuminate/http": "4.1.*",
+        "illuminate/validation": "4.1.*"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Andy\\Validation\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
