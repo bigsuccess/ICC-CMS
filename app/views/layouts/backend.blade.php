@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="Andy Pham, Lại Đạo">
         <meta name="keyword" content="Administrator">
-        <title>Administrator</title>
+        <title>Administrator</title>        
         {{ Basset::show('backend.css') }}
     </head>
 
@@ -18,7 +18,7 @@
                     <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
                 </div>
                 <!--logo start-->
-                <a href="{{ url('nevergiveup') }}" class="logo" >Flat<span>lab</span></a>
+                <a href="{{ url('nevergiveup') }}" class="logo" >Icc<span> CMS</span></a>
                 <!--logo end-->
                 <div class="top-nav ">
                     <ul class="nav pull-right top-menu">
@@ -53,7 +53,7 @@
                         <li {{ active() }}>
                             <a href="{{ url('nevergiveup') }}">
                                 <i class="icon-dashboard"></i>
-                                <span>Dashboard</span>
+                                <span>Trang chủ</span>
                             </a>
                         </li>
                         <li class="sub-menu">
@@ -65,17 +65,37 @@
                             <ul class="sub">
                                 <li><a class="" href="{{ url('nevergiveup/users') }}">Tài khoản</a></li>
                                 <li><a  href="{{ url('nevergiveup/users/create') }}">Thêm tài khoản</a></li>
+                                <li><a  href="{{ url('nevergiveup/roles') }}">Danh sách quyền</a></li>
+                                <li><a  href="{{ url('nevergiveup/roles/create') }}">Tạo mới quyền</a></li>
                             </ul>
                         </li>
                         <li class="sub-menu">
                             <a href="javascript:;" class="">
                                 <i class="icon-cogs"></i>
-                                <span>Quản lý blog</span>
+                                <span>Posts and Pages</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub">
                                 <li><a  href="{{ url('nevergiveup/categories') }}">Chuyên mục</a></li>
                                 <li><a class="" href="{{ url('nevergiveup/categories/create') }}">Thêm chuyên mục</a></li>
+                                <li><a class="" href="{{ url('nevergiveup/categories/sort') }}">Sx chuyên mục</a></li>
+                                <li class="btt"></li>
+                                <li><a  href="{{ url('nevergiveup/posts') }}">Bài viết</a></li>
+                                <li><a class="" href="{{ url('nevergiveup/posts/create') }}">Thêm bài viết</a></li>
+                                <li class="btt"></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;" class="">
+                                <i class="icon-cogs"></i>
+                                <span>Quản lý chung</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub">
+                                <li><a  href="{{ url('nevergiveup/langs/create') }}">Thêm ngôn ngữ</a></li>
+                                <li><a class="" href="{{ url('nevergiveup/langs') }}">Ds ngôn ngữ</a></li>
+                                <li class="btt"></li>
                             </ul>
                         </li>
                     </ul>
@@ -96,6 +116,7 @@
             </section>
             <!--main content end-->
         </section>
+
         <!-- js placed at the end of the document so the pages load faster -->
         {{ Basset::show('backend.js') }}
     </body>

@@ -23,6 +23,11 @@ class UserValidator extends ValidatorService {
         'update' => [
             'email' => 'required|unique:users,email,@id'
         ],
+        'changepass'=>[
+            'old_password'=>'required|min:6',
+            'new_password'=>'required|min:6|confirmed',
+            'new_password_confirmation'=>'required|min:6',
+        ],
         'login' => [
             'username' => 'required|min:6|max:32|regex:/^([a-z])+$/i',
             'password' => 'required|min:6'
@@ -36,7 +41,10 @@ class UserValidator extends ValidatorService {
         'phone' => 'Số điện thoại',
         'first_name' => 'Họ đệm',
         'last_name' => 'Tên đệm',
-        'address' => 'Địa chỉ'
+        'address' => 'Địa chỉ',
+        'old_password' =>'Mật khẩu cũ',
+        'new_password' =>'Mật khẩu mới',
+        'new_password_confirmation'=>'Nhập lại mật khẩu mới'
     ];
     protected $messages = [
         'username.regex' => 'Tên tài khoản không chưa kí tự đặc biệt'

@@ -1,26 +1,56 @@
 <?php
+
 /* Backend Router */
 Route::group(['prefix' => 'nevergiveup'], function() {
-    /** User **/
+    /** User * */
     Route::get('/users/login', 'Backend\UsersController@getLogin');
-    Route::post('/users/login', 
-            ['as' => 'nevergiveup.users.login',
-            'uses' => 'Backend\UsersController@postLogin']);
+    Route::post('/users/login', ['as' => 'nevergiveup.users.login',
+        'uses' => 'Backend\UsersController@postLogin']);
     Route::get('/users/logout', 'Backend\UsersController@getLogout');
-    Route::get('/users/change-password',['as'=> 'change-password',
-        'users'=>'Backend\UsersController@getChangePassword'
-        ]);
-    //Route::post('users/change-password',['as' => 'nevergiveup.users.changpassword', 'users'=> ])
+
+    /* Changepassword POST */
+    Route::post('/users/change-password', array('as' => 'change-password-post',
+        'uses' => 'Backend\UsersController@postChangePassword')
+    );
+    /** Changepassword GET */
+    Route::get('/users/change-password', array('as' => 'change-password',
+        'uses' => 'Backend\UsersController@getChangePassword'
+            )
+    );
+
+    Route::get('/roles/draft', array('as' => 'draft',
+        'uses' => 'Backend\RolesController@getDraft'
+            )
+    );
+
+    Route::get('/categories/ajax', array('as' => 'ajax',
+        'uses' => 'Backend\CategoriesController@getAjax'
+            )
+    );
+    Route::get('/categories/sort', array('as' => 'sort',
+        'uses' => 'Backend\CategoriesController@getSort'
+            )
+    );
+
     Route::resource('users', 'Backend\UsersController');
-    
-    /** Blog **/
+
+    /** Blog * */
     Route::resource('blogs', 'BlogsController');
-    /** Category **/
-    
+
+    /** Category * */
     Route::resource('categories', 'Backend\CategoriesController');
-    /** Dashboard **/
+
+    /** Roles * */
+    Route::resource('roles', 'Backend\RolesController');
+
+    /** Posts * */
+    Route::resource('posts', 'Backend\PostsController');
     
-    Route::any('/', 'Backend\DashboardController@index');    
+    /** Langs * */
+    Route::resource('langs', 'Backend\LangsController');
+    
+    /** Dashboard * */
+    Route::any('/', 'Backend\DashboardController@index');
 });
 
 

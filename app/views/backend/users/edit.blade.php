@@ -64,6 +64,13 @@
                         {{ alertError('address') }}
                     </div>
                 </div>
+                <div class="form-group {{ statusValidator('role_id') }}">
+                    {{ Form::label('role_id', 'Nhóm', ['class' => 'col-lg-2 control-label'])}}
+                    <div class="col-lg-3">
+                        {{ Form::select('role_id', $roles, null, ['class' => 'form-control']) }}
+                        {{ alertError('role_id') }}
+                    </div>
+                </div>
                 <div class="col-lg-offset-2 col-lg-10">
                     {{ Form::submit('Lưu lại', ['class' => 'btn btn-danger']) }}
                     {{ Form::reset('Làm mới', ['class' => 'btn btn-info']) }}

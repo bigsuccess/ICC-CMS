@@ -38,7 +38,9 @@
                             <td>{{ $user->phone }}</td>
                             <td class="center hidden-phone">
                                 {{ link_to_route('nevergiveup.users.show','Sửa', $user->id.'/edit',['class'=>'btn btn-success btn-xs pull-left btnEdit'])}}                         
+                                @if($user->role_id != 1)
                                 {{Form::delete('nevergiveup/users/'. $user->id)}}
+                                @endif
                             </td>
                         </tr>
                         @endforeach

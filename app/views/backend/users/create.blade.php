@@ -64,6 +64,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="form-group {{ statusValidator('birthday') }}">
                     {{ Form::label('birthday', 'Ngày sinh', ['class' => 'col-lg-2 control-label']) }}
                     <div class="col-lg-3">
@@ -83,6 +84,13 @@
                     <div class="col-lg-6">
                         {{ Form::textarea('address', null, ['class' => 'form-control']) }}
                         {{ alertError('address') }}
+                    </div>
+                </div>
+                <div class="form-group {{ statusValidator('role_id') }}">
+                    {{ Form::label('role_id', 'Nhóm', ['class' => 'col-lg-2 control-label'])}}
+                    <div class="col-lg-3">
+                        {{ Form::select('role_id', $roles, null, ['class' => 'form-control']) }}
+                        {{ alertError('role_id') }}
                     </div>
                 </div>
                 <div class="col-lg-offset-2 col-lg-10">
