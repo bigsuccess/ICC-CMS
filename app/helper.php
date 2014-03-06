@@ -33,10 +33,27 @@ function alertError($key) {
     return '';
 }
 
-function statusCategory($type) {
+function status($type) {
     $status = 'Không kích hoạt';
     if ($type == 1) {
         $status = 'Kích hoạt';
     }
     return $status;
+}
+
+function get_ol(&$list, $child = FALSE) {
+    $str = '';
+    if (count($list)) {
+        $str .= $child == FALSE ? '<ol class="sortable">' : '<ol>';
+        foreach ($list as $item) {
+            $str .= '<li id="list_' . $item->id . '">';
+            $str .= '<div>' . $item->name . '</div>';
+            if (isset($item->children) && count($item->children)) {
+                $str .= get_ol($item->children, TRUE);
+            }
+            $str .= '</li>' . PHP_EOL;
+        }
+        $str .= '</ol>' . PHP_EOL;
+    }
+    return $str;
 }

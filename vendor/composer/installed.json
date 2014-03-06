@@ -1563,59 +1563,6 @@
         ]
     },
     {
-        "name": "patchwork/utf8",
-        "version": "v1.1.18",
-        "version_normalized": "1.1.18.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/nicolas-grekas/Patchwork-UTF8.git",
-            "reference": "66a936cc633fe13378c91f81030d5193be968480"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/66a936cc633fe13378c91f81030d5193be968480",
-            "reference": "66a936cc633fe13378c91f81030d5193be968480",
-            "shasum": ""
-        },
-        "require": {
-            "lib-pcre": ">=7.3",
-            "php": ">=5.3.0"
-        },
-        "suggest": {
-            "ext-iconv": "Use iconv for best performance",
-            "ext-intl": "Use Intl for best performance",
-            "ext-mbstring": "Use Mbstring for best performance"
-        },
-        "time": "2014-02-02 17:09:49",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Patchwork": "class/",
-                "Normalizer": "class/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "(Apache-2.0 or GPL-2.0)"
-        ],
-        "authors": [
-            {
-                "name": "Nicolas Grekas",
-                "email": "p@tchwork.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Extensive, portable and performant handling of UTF-8 and grapheme clusters for PHP",
-        "homepage": "https://github.com/nicolas-grekas/Patchwork-UTF8",
-        "keywords": [
-            "i18n",
-            "unicode",
-            "utf-8",
-            "utf8"
-        ]
-    },
-    {
         "name": "monolog/monolog",
         "version": "1.7.0",
         "version_normalized": "1.7.0.0",
@@ -2553,40 +2500,34 @@
         "source": {
             "type": "git",
             "url": "https://github.com/JeffreyWay/Laravel-4-Generators.git",
-            "reference": "a70652c370ebb67ce12a35ace35178a4027cec60"
+            "reference": "24a3b3c9953dc8cff62e869fe4e4c152dd57e369"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/a70652c370ebb67ce12a35ace35178a4027cec60",
-            "reference": "a70652c370ebb67ce12a35ace35178a4027cec60",
+            "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/24a3b3c9953dc8cff62e869fe4e4c152dd57e369",
+            "reference": "24a3b3c9953dc8cff62e869fe4e4c152dd57e369",
             "shasum": ""
         },
         "require": {
-            "doctrine/orm": "2.4.*",
-            "mustache/mustache": "2.4.*",
-            "php": ">=5.3.0"
+            "illuminate/support": "4.1.*",
+            "php": ">=5.4.0"
         },
         "require-dev": {
-            "illuminate/console": "~4",
-            "illuminate/filesystem": "~4",
-            "illuminate/support": "~4",
-            "mockery/mockery": "0.8.*"
+            "behat/behat": "v2.5.1",
+            "behat/mink": "v1.5.0",
+            "behat/mink-extension": "*",
+            "behat/mink-goutte-driver": "*",
+            "behat/mink-selenium2-driver": "*",
+            "phpspec/phpspec": "2.0.*@dev",
+            "phpunit/phpunit": "3.*"
         },
-        "time": "2014-02-28 22:04:18",
+        "time": "2014-03-05 00:41:14",
         "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
         "installation-source": "dist",
         "autoload": {
             "psr-0": {
                 "Way\\Generators": "src/"
-            },
-            "classmap": [
-                "src/Way/Generators/Generators"
-            ]
+            }
         },
         "notification-url": "https://packagist.org/downloads/",
         "authors": [
@@ -2596,12 +2537,6 @@
                 "homepage": "http://jeffrye-way.com",
                 "role": "Developer"
             }
-        ],
-        "description": "Laravel 4 Generators",
-        "keywords": [
-            "artisan",
-            "generators",
-            "laravel"
         ]
     },
     {
@@ -3366,6 +3301,59 @@
             "datatables jquery plugin",
             "laravel",
             "laravel4"
+        ]
+    },
+    {
+        "name": "patchwork/utf8",
+        "version": "v1.1.20",
+        "version_normalized": "1.1.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nicolas-grekas/Patchwork-UTF8.git",
+            "reference": "aea0de833cba7cf2c25239be71f2787edaee36d5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/aea0de833cba7cf2c25239be71f2787edaee36d5",
+            "reference": "aea0de833cba7cf2c25239be71f2787edaee36d5",
+            "shasum": ""
+        },
+        "require": {
+            "lib-pcre": ">=7.3",
+            "php": ">=5.3.0"
+        },
+        "suggest": {
+            "ext-iconv": "Use iconv for best performance",
+            "ext-intl": "Use Intl for best performance",
+            "ext-mbstring": "Use Mbstring for best performance"
+        },
+        "time": "2014-03-01 20:01:07",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Patchwork": "class/",
+                "Normalizer": "class/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "(Apache-2.0 or GPL-2.0)"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Extensive, portable and performant handling of UTF-8 and grapheme clusters for PHP",
+        "homepage": "https://github.com/nicolas-grekas/Patchwork-UTF8",
+        "keywords": [
+            "i18n",
+            "unicode",
+            "utf-8",
+            "utf8"
         ]
     }
 ]

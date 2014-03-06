@@ -9,7 +9,7 @@
         "nesbot/carbon": "1.8.0",
         "zizaco/entrust": "dev-master",
         "jasonlewis/basset": "dev-master",
-        "bllim/datatables": "*"        
+        "bllim/datatables": "*"
     },
     "require-dev": {
         "andy/validation": "dev-master",

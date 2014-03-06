@@ -6,8 +6,8 @@ use Zizaco\Entrust\HasRole;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-    use HasRole;
-    
+    use HasRole;    
+       
     public $timestamps = false;
 
     /**
@@ -49,6 +49,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      */
     public function getReminderEmail() {
         return $this->email;
+    }
+    
+    public function role(){
+        return $this->belongsTo('Role');
     }
 
 }

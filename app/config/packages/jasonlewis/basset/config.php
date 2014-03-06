@@ -44,19 +44,22 @@ return array(
                 $collection->add('jquery.js');
                 $collection->add('jquery-ui-1.9.2.custom.min.js');
                 $collection->add('bootstrap.min.js');
+                $collection->add('jquery.nicescroll.js');
+                $collection->add('jquery.mjs.nestedSortable.js');
                 $collection->add('bootstrap-datapicker.js');
                 $collection->add('bootbox.min.js');
+                
                 $collection->add('jquery.dataTables.min.js');
                 $collection->add('dataTables.bootstrap.js');
                 $collection->add('datatables.fnReloadAjax.js');
-                $collection->add('jquery.colorbox-min.js');
+                $collection->add('jquery.colorbox-min.js');                
+                $collection->add('ckeditor.js');                
                 
-                $collection->add('jquery.nicescroll.js');
                 $collection->add('jquery.scrollTo.min.js');
                 $collection->add('common-scripts.js');
+                $collection->add('config.sortable.js');
             });
         }
-
     ),
 
     /*

@@ -44,7 +44,7 @@ class CategoriesController extends \BackendController {
     }
 
     public function show() {
-        return View::make('categories.show');
+//        return View::make('categories.show');
     }
 
     public function edit($id) {
@@ -90,4 +90,16 @@ class CategoriesController extends \BackendController {
         }
     }
 
+    public function getAjax() {
+        $categories = Category::where('status', '=', 1)->get();
+        return View::make('backend.categories.get-ajax')->with(compact('categories'), $categories);
+    }
+
+    public function getSort() {
+        if (isset($_POST['sortable'])) {
+            print_r($_POST['sortable']);
+        }
+        $categories = Category::where('status', '=', 1)->get();
+        return View::make('backend.categories.sort')->with(compact('categories'), $categories);
+    }
 }
